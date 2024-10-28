@@ -22,8 +22,15 @@ export class AppComponent {
   TaskTitle: string = ""
   todoLists? : TODOInterface[]
 
-  addTodo(){
+  addTodo() : void{
     console.log("add todo clicked")
     console.log("title : " + this.TaskTitle)
+  }
+
+  edit(id : number) : void {
+
+  }
+  delete(id : number): void {
+
   }
 }
