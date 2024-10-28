@@ -13,7 +13,7 @@ export class AppComponent {
   constructor(private service: TodoService){}
   
   ngOnInit() : void{
-    this.service.getContactForm().subscribe(Output=>{
+    this.service.getTodoList().subscribe(Output=>{
       console.log(Output)
       this.todoLists = Output.lists
     })

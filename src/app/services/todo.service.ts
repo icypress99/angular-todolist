@@ -12,7 +12,7 @@ export class TodoService {
 
   constructor(private http : HttpClient) { }
 
-  getContactForm(): Observable<TODOListsResponse>{
+  getTodoList(): Observable<TODOListsResponse>{
     return this.http.get(this.api_getList) as Observable<TODOListsResponse>
   }
 
