@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li{
+    list-style-type: none;
+}
+
+.container>h1{
+    text-align: center;
+}
+.add{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+    margin: 5vh auto;
+    padding: 2vh 2vw;
+    border: 1px solid #dedede;
+    border-radius: 3px;
+}
+
+.add input{
+    width: 100%;
+    border: 1px solid #dedede;
+    padding: 1.5vh;
+    outline: none;
+}
+
+.add button{
+    width: 100%;
+    padding: 1.5vh;
+    margin-top: 2vh;
+    border: none;
+    border-radius: 3px;
+    background-color: #009999;
+    color: #fdfdfd;
+}
+
+.todolist-container{
+    width: 90%;
+    margin: 2vh auto;
+    text-align: center;
+}
+
+.todolist-container>.filters{
+    display: flex;
+    justify-content: space-between;
+    margin: 2vh 0 ;
+}
+
+.todolist-container>.filters>button{
+    border: none;
+    background-color: #009999;
+    color: #fdfdfd;
+    width: 30%;
+    padding: 1.5vh;
+    border-radius: 3px;
+}
+
+
+.todolist-container>ul>li{
+    display: flex;
+    justify-content: space-between;
+    padding: 2vh 2vw;
+    margin-bottom: 1vh;
+    border: 1px solid #dedede;
+    border-radius: 3px;
+}
+
+.todolist-container>ul>li>div{
+    display: flex;
+    align-items: center;
+}
+
+.todolist-container>ul>li>div>*{
+    margin: 0 1vw;
+    font-size: 12px;
+}
+
+.todolist-container>ul>li>div>.trash{
+    color: #de4312;
+}
+
+.todolist-container>ul>li>div>.edit{
+    color: #dbde12;
+}
