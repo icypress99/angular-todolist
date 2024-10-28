@@ -1,7 +1,7 @@
 <div class="container">
   <h1>TODO Input</h1>
   <div class="add">
-    <input type="text">
+    <input [(ngModel)]="TaskTitle" type="text" >
     <button (click)="addTodo()" >Add new Task</button>
   </div>
 

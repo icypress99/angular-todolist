@@ -7,8 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'todolist';
+  TaskTitle: string = ""
   
   addTodo(){
     console.log("add todo clicked")
+    console.log("title : " + this.TaskTitle)
   }
 }
