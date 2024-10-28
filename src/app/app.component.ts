@@ -31,7 +31,11 @@ export class AppComponent {
 
   }
   delete(id : number): void {
-
+    this.service.deleteTodo(id).subscribe(Output=>{
+      if(Output.isSuccess){
+        this.todoLists = this.todoLists.filter(todo => todo.id = id)
+      }
+    })
   }
 
   toggleDone(id: number): void{
