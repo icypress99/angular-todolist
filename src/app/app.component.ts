@@ -1,5 +1,6 @@
 import { Component, Output } from '@angular/core';
 import { TodoService } from './services/todo.service';
+import { TODOInterface } from './models/todo-item';
 
 @Component({
   selector: 'app-root',
@@ -13,12 +14,14 @@ export class AppComponent {
   
   ngOnInit() : void{
     this.service.getContactForm().subscribe(Output=>{
-      console.log(Output.lists)
+      console.log(Output)
+      this.todoLists = Output.lists
     })
   }
 
   TaskTitle: string = ""
-  
+  todoLists? : TODOInterface[]
+
   addTodo(){
     console.log("add todo clicked")
     console.log("title : " + this.TaskTitle)
