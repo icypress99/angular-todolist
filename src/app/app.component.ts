@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Output } from '@angular/core';
+import { TodoService } from './services/todo.service';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'todolist';
+
+  constructor(private service: TodoService){}
+  
+  ngOnInit() : void{
+    this.service.getContactForm().subscribe(Output=>{
+      console.log(Output.lists)
+    })
+  }
+
   TaskTitle: string = ""
   
   addTodo(){

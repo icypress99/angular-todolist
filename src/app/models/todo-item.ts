@@ -3,3 +3,7 @@ export interface TODOInterface{
     title: string,
     done: boolean
 }
+
+export interface TODOListsResponse{
+    lists: TODOInterface[]
+}
