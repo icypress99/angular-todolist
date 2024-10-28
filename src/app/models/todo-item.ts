@@ -12,3 +12,9 @@ export interface UpdateTODOResponse{
     isSuccess: boolean,
     message: string
 }
+
+export interface AddTODOResponse{
+    id: number,
+    isSuccess: boolean,
+    message: string
+}

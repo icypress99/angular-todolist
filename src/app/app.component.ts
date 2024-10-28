@@ -25,6 +25,22 @@ export class AppComponent {
   addTodo() : void{
     console.log("add todo clicked")
     console.log("title : " + this.TaskTitle)
+
+    let newTodo: TODOInterface = {
+      id: 0,
+      title: this.TaskTitle,
+      done: false
+    }
+
+    this.service.AddTodo(newTodo).subscribe(Output=>{
+      if(Output.isSuccess){
+        newTodo.id = Output.id
+        this.todoLists.push(newTodo)
+        this.TaskTitle = ""
+      }
+    })
+
+
   }
 
   edit(id : number) : void {
