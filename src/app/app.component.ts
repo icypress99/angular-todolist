@@ -20,7 +20,7 @@ export class AppComponent {
   }
 
   TaskTitle: string = ""
-  todoLists? : TODOInterface[]
+  todoLists: TODOInterface[] = []
 
   addTodo() : void{
     console.log("add todo clicked")
@@ -36,5 +36,23 @@ export class AppComponent {
 
   toggleDone(id: number): void{
     console.log(id)
+    let item = this.todoLists.find(todo => todo.id === id);
+    console.log(item)
+    if(item){
+      let storePrevStatus = item.done;
+      item.done = ! item.done
+
+      this.service.updateTodo(item).subscribe(Output=>{
+        console.log(Output)
+        if(Output.isSuccess){
+          console.log(Output.message)
+        }else{
+          if(item)
+            item.done = storePrevStatus
+          console.log("error")
+        }
+        
+      })
+    }
   }
 }
