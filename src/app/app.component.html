@@ -17,7 +17,7 @@
       <li *ngFor="let todo of todoLists">
         <h4> {{todo.title}} </h4>
         <div>
-          <input type="checkbox"  [(ngModel)]="todo.done">
+          <input type="checkbox"  [(ngModel)]="todo.done" (change)="toggleDone(todo.id)">
           <i class="edit fas fa-edit" (click)="edit(todo.id)" ></i>
           <i class="trash fas fa-trash" (click)="delete(todo.id)"></i>
         </div>

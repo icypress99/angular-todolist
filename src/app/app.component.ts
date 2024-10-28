@@ -33,4 +33,8 @@ export class AppComponent {
   delete(id : number): void {
 
   }
+
+  toggleDone(id: number): void{
+    console.log(id)
+  }
 }
